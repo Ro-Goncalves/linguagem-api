@@ -17,6 +17,10 @@ ser encontrada em:
 
 **SERVIÇOS**
 
+https://www.youtube.com/watch?v=KD9OaryS1Kw
+
+https://frozen-escarpment-49782.herokuapp.com/linguagens
+
 
 
 
