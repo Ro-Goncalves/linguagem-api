@@ -9,3 +9,15 @@ Esse é o repositório com os fontes desenvolvidos na aula 04. Toda a documenta�
 ser encontrada em:
 
 [REPOSITÓRIO PRINCIPAL](https://github.com/Ro-Goncalves/alura-imersao)
+
+<details>
+<summary><h2> Documentação Da API </h2></summary>
+
+**ENDPOINT:**
+
+**SERVIÇOS**
+
+
+
+
+</details>

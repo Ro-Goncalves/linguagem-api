@@ -61,6 +61,19 @@ public class LinguagemController {
 		return ResponseEntity.status(201).body(linguagemSalva);
 	}
 	
+	@PostMapping("/linguagem-repositorio/votar")
+	public ResponseEntity<Linguagem> cadastrarVoto(@RequestBody Voto voto){
+		Voto cadastarVoto = new Voto(voto.id(), voto.voto());
+		
+		Linguagem linguagemEscolhida = repositorio.findById(cadastarVoto.id()).get();
+		
+		String votacaoAtual = linguagemEscolhida.getRanking();
+		int votacaoNova = Integer.parseInt(votacaoAtual) + Integer.parseInt(cadastarVoto.voto());		
+		linguagemEscolhida.setRanking("" + votacaoNova);
+		
+		return ResponseEntity.status(200).body(repositorio.save(linguagemEscolhida));
+	}
+	
 	@GetMapping("/linguagens-repositorio/{id}")
 	public Linguagem obterLinguagemRepositorio(@PathVariable String id) {
 		Linguagem linguagemConsultada = repositorio.findById(id).get();
@@ -83,7 +96,7 @@ public class LinguagemController {
 		Linguagem linguagemAtualizada = repositorio.save(linguagem);
 		
 		return linguagemAtualizada;		
-	}
+	}	
 	
 	@PutMapping("/linguagens-repositorio/{id}")
 	public Linguagem atualizarLinguagem(@PathVariable(value = "id") String id, @RequestBody Linguagem linguagem) {
