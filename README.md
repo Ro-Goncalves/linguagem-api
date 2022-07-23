@@ -13,15 +13,22 @@ ser encontrada em:
 <details>
 <summary><h2> Documentação Da API </h2></summary>
 
-**ENDPOINT:**
+**ENDPOINT:** https://frozen-escarpment-49782.herokuapp.com
+
+**LINK COLLECTION POSTMAN:** https://www.getpostman.com/collections/1158eff13b9a538b4e97
 
 **SERVIÇOS**
 
-https://www.youtube.com/watch?v=KD9OaryS1Kw
+Buscar todas as linguagens: GET /linguagens-repositorio.
 
-https://frozen-escarpment-49782.herokuapp.com/linguagens
+![assets](assets/getLinguagens.png)
 
+Buscar linguagem por id: GET /linguagens-repositorio/{id}.
 
+![assets](assets/getLinguagensById.png)
 
+Votar: POST /linguagem-repositorio/votar
+
+![assets](assets/votar.png)
 
 </details>
